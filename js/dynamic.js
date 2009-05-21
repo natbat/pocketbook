@@ -1,6 +1,6 @@
 jQuery(function($) {
 	// Append ?print to the URL to trigger print preview mode
-	if (location.href.split('?')[1].indexOf('print') > -1) {
+	if ((location.href.split('?')[1] || '').indexOf('print') > -1) {
 		$('link[media=print]').attr('media', '');
 	}
 	
