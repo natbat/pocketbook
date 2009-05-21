@@ -1,0 +1,478 @@
+/* @group General styles */
+
+/*
+Harmonise v1.3
+Resets styles then adds basic typographical styling.
+Use as a starting point upon which to build more CSS.
+By Clearleft.com
+*/
+
+/* @group Reset */
+
+/* Based on http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+/* tables may still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* @end */
+
+
+body {
+	background: #fff;
+	color:#000;    font-size:14px;    line-height:1.2em; }
+
+a:link, 
+button.link span {
+	color: #0063DC;
+	text-decoration: underline;
+}a:visited {
+	color: #1057ae;
+	text-decoration: underline;
+}a:hover, 
+a:focus,
+button.link:hover,
+button.link:focus span {
+	color: #FFFFFF; 
+	text-decoration: none;
+	background-color: #0063DC;
+}a:active, 
+button.link:active span {
+	color: #FFFFFF; 
+	text-decoration: none; 
+	background-color: #0259C4; 
+}
+
+/* @group Font families */
+
+body {
+	font-family: "helvetica neue", arial, helvetica, sans-serif;	
+}
+
+pre, code, kbd, tt, samp, tt {
+	font-family: "andale mono", monospace;
+}
+
+/* @end */
+
+/* @group Font sizes & margins */
+
+p, ul, ol, dl, address, table, pre, form, fieldset {
+	font-size: 1em /* 14px */;
+	margin-bottom: 0.5em; 
+}
+
+/* size headings using classic scale of 16, 18, 24, 36 */
+
+/* @end */
+
+/* @group Headings */
+
+h1 {
+	font-size: 2.571em /* 36px */;
+	line-height:1em /* 36px */;
+	margin-top:0.1667em /* 6px */;
+	margin-bottom:0.5833em /* 21px */;
+}
+h2, h3 {
+	font-size:1.143em /* 16px */;
+	margin-top:0;
+	padding-bottom: 0.5em;
+	margin-bottom:0.5em /* 8px */; 
+	text-align: center;
+	border-bottom: 1px solid #999;
+}
+h4 {
+	margin-top:1em /* 21px */;
+	font-size:1em /* 14px */;
+	margin-bottom: 0.5em;
+}
+h5, h6 {
+	font-size:1em /* 14px */;
+	margin-bottom: 0.5em;
+}
+
+
+/* @end */
+
+/* @group Lists */
+
+ul {
+	list-style-type: disc;
+	margin-left: 1.5em; /* 21px */
+}
+
+ol {	
+	list-style-type: decimal;
+	margin-left: 1.5em; /* 21px */
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 1.5em; /* 21px */
+}
+
+ul ul, ol ol, ol ul, ul ol {
+	margin-bottom: 0;
+}
+
+/* @end */
+
+/* @group Tables */
+
+table {
+	border-bottom: 1px solid #C7C7C7;
+}
+
+caption {
+	font-weight: bold;
+	padding-bottom: 0.4375em; /* 7px */
+	font-size:1.144em; /* 16px */
+}
+
+thead th {
+	border-bottom: 3px solid #C7C7C7;
+	padding-top: 0;
+	padding-bottom: 0.5em; /* 7px */
+}
+
+tbody {
+	border-top: 3px solid #C7C7C7;	/* not rendered in IE6/7 */
+}
+
+tbody tr th, tbody tr td {
+	border-top: 1px solid #C7C7C7;
+}
+
+th, td {
+	text-align: left;
+	padding: 0.286em 0.5em 0.214em 0.5em; /* 4px 7px 3px 7px */
+}
+
+/* @end */
+
+/* @group Blockquotes */
+
+blockquote {
+	font-style: italic;
+	margin:0 0 0 0; /* 21px */
+	color: #999;
+}
+
+p+p+blockquote {
+	margin-top: 1.5em /* 21px */;
+}
+
+blockquote cite, 
+blockquote em {
+	font-style: normal;
+}
+
+/* @end */
+
+/* @group Other styling */
+
+address {
+	font-style: normal;
+}
+
+ins {
+	text-decoration: underline;
+	color: #27AD16;
+}
+
+del {
+	text-decoration: line-through;
+	color:  #B60D10;
+}
+
+pre {
+	white-space: pre;
+	width: 100%;
+	font-size: 0.7em;
+	overflow: hidden;
+	border-top: 3px double #C7C7C7;
+	border-bottom: 3px double #C7C7C7;
+	padding: 0.5em 0;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Helper styles */
+
+/* @group Forms */
+
+/* @group Containers */
+
+form .container {
+	margin-bottom: 1.5em; /* 21px */
+}
+
+
+/* @group Fieldsets */
+
+fieldset {
+	border: 1px solid #ccc;
+	padding: 0 1.5em 1em 1.5em; /* 0 21px 14px 21px */
+}
+
+legend {
+	font-weight: bold;
+}
+
+form fieldset .container {
+	margin-top: 1em; /* 14px */
+	margin-bottom:0;
+	position: relative;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Labels */
+
+label {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.meta-label {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.multi-container label, 
+.radio-container label, 
+.checkbox-container label {
+	font-weight: normal;
+}
+
+.radio-container label, 
+.checkbox-container label {
+	display: block;
+}
+
+.compact label {
+	display: inline;
+}
+
+/* @end */
+
+/* @group Meta */
+
+form .help {
+	display: block;
+	color: #777;
+	font-style: normal;
+	font-size: 0.857em; /* 12px */
+}
+
+/* @end */
+
+/* @group Form controls */
+
+input, textarea, select, button {
+	font-family: inherit;
+	font-size: 1em;
+	line-height: inherit;
+}
+
+select {
+	background-color: #fff; /* fixes bug in Opera which inherits bgcolor from container */
+}
+
+textarea,
+input[type='text'],
+input[type='password'],
+select {
+	border-width: 1px;
+	border-style: solid;
+	border-top-color: #999;
+	border-left-color: #999;
+	border-bottom-color: #ccc;
+	border-right-color: #ccc;
+	padding: 0 1px 1px 1px;
+}
+
+textarea:focus, 
+input[type='text']:focus, 
+input[type='password']:focus, 
+select:focus {
+	border-color: #888;
+	outline: 2px solid #ffffaa;
+}
+
+input.short {
+	width: 4em;
+}
+
+input.medium, textarea.medium {
+	width: 12em;
+}
+
+input.long, textarea.long {
+	width: 30em;
+}
+
+textarea {
+	width: 99%;
+	display: block;
+}
+
+button {
+	overflow: visible;
+	cursor: pointer;
+}
+
+.button-container input {
+	font-weight: bold;
+}
+
+.button-container input.cancel {
+	font-weight: normal;
+}
+
+button.link {
+	border: 0;
+	padding: 0;
+	background-color: #fff;
+	font-weight: normal;
+	cursor: pointer;
+	width: auto;
+	overflow: visible;
+}
+
+/* accessibility feature, resize check and radio inputs */
+.radio-container input, 
+.checkbox-container input {
+	width: 1em;
+	height: 1em;
+}
+
+/* @end */
+
+/* @end */
+
+/* @end */
+
+/* @group Page structure */
+
+#book {
+	margin: 10px;
+}
+.page {
+	width: 241px;
+	height: 370px;
+	overflow: hidden;
+	outline: 1px solid #C7C7C7;
+	float: left;
+	margin: 10px;
+}
+.inner {
+	margin: 15px;
+}
+
+/* @end */
+
+/* @group Page Components */
+
+/* @group Page Types */
+/* class on page */ 
+
+.lines {
+	background-image: url(../img/lines.gif);
+	background-repeat: repeat-y;
+	background-position: 15px 1em;
+}
+
+.squares {
+	
+}
+
+.isometric {
+	
+}
+
+/* @end */
+
+/* @group Page Elements */
+
+/* @group Todo list */
+
+.todo {
+	padding-left: 0;
+	margin-left: 0;
+}
+.todo li {
+	border-bottom: 1px solid #C7C7C7;
+	background-image: url(../img/check.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0.3em;
+	list-style-type: none;
+	margin: 0.35em 0 0 0;
+	padding: 0 0 0.35em 15px;
+}
+
+/* @end */
+
+.micro p,
+.micro h3,
+.micro h4,
+.micro h5,
+.micro h6,
+h3.micro,
+h4.micro,
+h5.micro,
+h6.micro,
+p.micro {
+	font-size: 0.7em;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Overrides */
+
+/* @end */
+

@@ -1,0 +1,63 @@
+#book {
+	position: relative;
+	height: 969px;
+	width: 743px;
+	margin: 0;
+	border: 1px solid #C7C7C7;
+}
+.page {
+	position: absolute;
+	float: none;
+	margin: 0;
+}
+
+/* rotated left */
+#page1,
+#page8,
+#page7,
+#page6 {
+	-webkit-transform: translate(64.5px, -64.5px) rotate(-90deg);
+	/*-webkit-transform:rotate(90deg) scale(0.6) skew(-23deg);*/
+}
+
+/* rotated right */
+#page2,
+#page3,
+#page4,
+#page5 {
+	-webkit-transform: translate(-64.5px, -64.5px) rotate(90deg);
+}	
+/* cover */
+#page1 {
+	top: 1px;
+	left: 2px;
+}
+#page2 {
+	top: 0;
+	right: 1px;
+}
+#page3 {
+	top: 242px;
+	right: 1px;
+}
+#page4 {
+	top: 484px;
+	right: 1px;
+}
+#page5 {
+	top: 726px;
+	right: 1px;
+}
+#page6 {
+	top: 727px;
+	left: 2px;
+}
+#page7 {
+	top: 485px;
+	left: 2px;
+}
+/* back page */
+#page8 {
+	top: 243px;
+	left: 2px;
+}
