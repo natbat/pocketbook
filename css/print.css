@@ -17,6 +17,8 @@
 #page7,
 #page6 {
 	-webkit-transform: translate(64.5px, -64.5px) rotate(-90deg);
+	-moz-transform: translate(64.5px, -64.5px) rotate(-90deg);
+	transform: translate(64.5px, -64.5px) rotate(-90deg);
 	/*-webkit-transform:rotate(90deg) scale(0.6) skew(-23deg);*/
 }
 
@@ -26,6 +28,8 @@
 #page4,
 #page5 {
 	-webkit-transform: translate(-64.5px, -64.5px) rotate(90deg);
+	-moz-transform: translate(-64.5px, -64.5px) rotate(90deg);
+	transform: translate(-64.5px, -64.5px) rotate(90deg);
 }	
 /* cover */
 #page1 {
