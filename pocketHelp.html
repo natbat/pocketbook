@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>pocket wiki - Terminal commands</title>
+	<meta name="author" content="Natalie Downe">
+	<!-- Date: 2009-05-23 -->
+	
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+	
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/dynamic.js"></script>
+	
+</head>
+<body>
+	
+	<div id="book">
+		<div id="page1" class="page">
+			<div class="inner">
+				<h1><span>pocket wiki</span>Terminal commands</h1>
+				
+				<div class="footer">
+					<p>This book belongs to:</p><br><br>
+					<hr>
+				</div>
+			</div>
+		</div>
+		
+		<div id="page2" class="page">
+			<div class="inner">
+				<h2>navigate the file tree</h2>
+			
+				<p><span class="micro">changing directory to <code>dirname</code></span>
+					<code>cd dirname</code>
+				</p>
+				<p><span class="micro">move up a directory in the tree</span>
+					<code>cd ..</code>
+					<span class="micro">dont forget you can drag a folder in from the finder to get a path to that directory</span>
+				</p>
+				<p><span class="micro">go back to the last directory I was in</span>
+					<code>cd -</code>
+				</p>
+				<p><span class="micro">where am I? (present working directory)</span>
+					<code>pwd</code>
+				</p>
+				<p><span class="micro">list what's in this directory</span>
+					<code>ls</code>
+				</p>
+				<p><span class="micro">now give me more information in the listing</span>
+					<code>ls -lah</code>
+				</p>
+				<p><span class="micro">ssh to server</span>
+					<code>ssh user@domain.com</code>
+				</p>
+			</div>
+		</div>
+		
+		<div id="page3" class="page">
+			<div class="inner">
+				<h2>find <abbr class="amp" title="and">&amp;</abbr> open</h2>
+				<p><span class="micro">list all files recursively in subdomains</span>
+					<code>find .</code>
+				</p>
+				<p><span class="micro">find all files with '<code>.css</code>' in the name</span>
+					<code>find . | grep .css</code>
+				</p>
+				<p><span class="micro">find the string '<code>prose</code>' in the contents of all the files in this directory</span>
+					<code>grep -r "prose" .</code>
+				</p>
+				<p><span class="micro">open a file as if you had double clicked it in the finder (mac only)</span>
+					<code>open filename</code>
+				</p>
+				<p><span class="micro">open the current directory in the finder</span>
+					<code>open .</code>
+				</p>
+				<p><span class="micro">make a directory called <code>dirname</code></span>
+					<code>mkdir dirname</code>
+				</p>
+				<p><span class="micro">create a file called <code>filename</code> if it doesnt exist or update last modified date if it does</span>
+					<code>touch filename</code>
+				</p>
+			</div>	
+		</div>
+		
+		<div id="page4" class="page">
+			<div class="inner">
+				<h2>move, remove <abbr class="amp" title="and">&amp;</abbr> copy</h2>
+				<p><span class="micro">move or rename a file or directory</span>
+					<code>mv oldname newname</code>
+				</p>
+				<p><span class="micro">remove a file</span>
+					<code>rm filename</code>
+				</p>
+				<p><span class="micro">remove a directory and all its contents. <strong>BE VERY CAREFUL!</strong> you could easily delete everything!</span>
+					<code>rm -rf dirname</code>
+				</p>
+				<p><span class="micro">copy a file</span>
+					<code>cp oldfilename newfilename</code>
+				</p>
+				<p><span class="micro">copy a directory and everything in it</span>
+					<code>cp -r olddirname newdirname</code>
+				</p>
+				<p><span class="micro">securely copy a file to / on a remote server</span>
+					<code>scp file user@domain.com:</code>
+					<span class="micro">you can also copy a directory using <code>scp -r</code></span>
+				</p>
+				
+			</div>
+		</div>
+		
+		<div id="page5" class="page">
+			<div class="inner">
+				<h2>subversion</h2>
+				<p><span class="micro">check out a repository to the current directory</span>
+					<code>svn co http://domain.com/svn/ .</code>
+				</p>
+				<p><span class="micro">update local directory from repository</span>
+					<code>svn up</code>
+				</p>
+
+				<p><span class="micro">are there new or modified files?</span>
+					<code>svn status</code>
+				</p>
+				<p><span class="micro">add new files to the repository</span>
+					<code>svn add filename</code>
+				</p>
+				<p><span class="micro">remove a file from subversion</span>
+					<code>svn remove filename</code>
+				</p>
+				<p><span class="micro">mark a previously conflicted file as resolved</span>
+					<code>svn resolved filename</code>
+				</p>
+				<p><span class="micro">who changed what line number of this file</span>
+					<code>svn blame filename</code>
+				</p>
+				<p><span class="micro">commit all changes in this directory</span>
+					<code>svn commit -m "commit msg"</code>
+				</p>
+			</div>	
+		</div>
+		
+		<div id="page6" class="page">
+			<div class="inner">
+				<h2>subversion <abbr class="amp" title="and">&amp;</abbr> download</h2>
+				<p><span class="micro">is this directory checked out from svn? and where?</span>
+					<code>svn info</code>
+				</p>
+				<p><span class="micro">show everything that has changed</span>
+					<code>svn diff</code>
+				</p>
+				<p><span class="micro">show what has changed in one file</span>
+					<code>svn diff filename</code>
+				</p>
+				
+				<p><span class="micro">open text editor in order to specify which files to ignore from svn</span>
+					<code>svn propedit svn:ignore .</code>
+				</p>
+				<p><span class="micro">download a file to the current directory</span>
+					<code>wget URL</code>
+				</p>
+				<p><span class="micro">show the contents of a file in the terminal</span>
+					<code>curl URL</code>
+				</p>
+			</div>	
+		</div>
+		
+		<div id="page7" class="page">
+			<div class="inner">
+				<h2>help <abbr class="amp" title="and">&amp;</abbr> information</h2>
+				<p><span class="micro">run any command as root</span>
+					<code>sudo your-command-here</code>
+				</p>
+				<p><span class="micro">get help for any command, eg <code>svn</code></span>
+					<code>svn --help</code>
+				</p>
+				<p><span class="micro">what is the uptime of this computer</span>
+					<code>uptime</code>
+				</p>
+				<p><span class="micro">what is the size of the current directory and all the contents</span>
+					<code>du -h</code>
+				</p>
+				<p><span class="micro">cancel the command you were currently typing</span>
+					<code>ctrl + c</code>
+				</p>
+				<p><span class="micro">go to the beginning of the line in the terminal</span>
+					<code>ctrl + a</code>
+				</p>
+				<p><span class="micro">go to the end of the line in the terminal</span>
+					<code>ctrl + e</code>
+				</p>
+			</div>	
+		</div>
+		
+		<div id="page8" class="page lines">
+		</div>
+	</div>
+
+</body>
+</html>

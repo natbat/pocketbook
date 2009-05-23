@@ -111,6 +111,13 @@ h1 {
 	margin-top:0.1667em /* 6px */;
 	margin-bottom:0.5833em /* 21px */;
 }
+h1 span {
+	font-size: 0.5em;
+	line-height: 1;
+	color: #CCC;
+	display: block;
+	margin-bottom: 0.3em;
+}
 h2, h3 {
 	font-size:1.143em /* 16px */;
 	margin-top:0;
@@ -233,6 +240,11 @@ pre {
 	padding: 0.5em 0;
 }
 
+hr {
+	border: none;
+	background-color: black;
+	height: 1px;
+}
 /* @end */
 
 /* @end */
@@ -393,12 +405,21 @@ button.link {
 
 /* @end */
 
+.amp {
+	font-family: "Bell MT", "Adobe Caslon Pro", "Goudy Old Style";
+	font-style: italic;
+	font-size: 1.3em;
+	line-height: 0.7;
+	margin: 0 0.2em 0 0.1em;
+}
+
 /* @end */
 
 /* @group Page structure */
 
 #book {
 	margin: 10px;
+	overflow: hidden;
 }
 .page {
 	width: 241px;
@@ -407,9 +428,16 @@ button.link {
 	outline: 1px solid #C7C7C7;
 	float: left;
 	margin: 10px;
+	position: relative;
 }
 .inner {
 	margin: 15px;
+}
+.footer {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	width: 211px;
 }
 
 /* @end */
@@ -464,8 +492,11 @@ h3.micro,
 h4.micro,
 h5.micro,
 h6.micro,
-p.micro {
+p.micro,
+span.micro {
 	font-size: 0.7em;
+	line-height: 1.5em;
+	display: block;
 }
 
 /* @end */

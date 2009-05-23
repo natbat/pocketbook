@@ -1,5 +1,6 @@
 #book {
 	position: relative;
+	overflow: visible;
 	height: 969px;
 	width: 743px;
 	margin: 0;
