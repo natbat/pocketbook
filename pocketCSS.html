@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>pocket wiki - Terminal commands</title>
+	<meta name="author" content="Natalie Downe">
+	<!-- Date: 2009-05-23 -->
+	
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+	
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/dynamic.js"></script>
+	
+</head>
+<body>
+	
+<div id="book">
+		<div id="page1" class="page">
+			<div class="inner">
+				<h1><span>dinky pocket book</span>CSS Selectors</h1>
+				
+				<div class="footer">
+					<p>This book belongs to:</p><br><br>
+					<hr>
+				</div>
+			</div>
+		</div>
+
+		<div id="page2" class="page">
+			<div class="inner">
+				<h2>Simple selectors</h2>
+				
+				<p class="micro">assume throughout that <code>E</code> and <code>F</code> are elements, they can have attribute <code>foo</code> e.g. <code style="white-space: nowrap">&lt;e foo="bar"&gt;</code> you can replace these with any elements or attributes.</p>
+				<p class="micro">In HTML, elements in CSS can be uppercase like these examples. In XHTML, elements must be lower case. Classes and IDs are <strong>always</strong> case sensitive</p> 
+			
+				<p><span class="micro"><strong>universal selector</strong>, match any element</span>
+					<code>*</code>
+				</p>
+				<p><span class="micro"><strong>type</strong> (or element) selector</span>
+					<code>E</code>
+				</p>
+				<p><span class="micro"><strong>ID selector</strong> an E element with ID equal to "myid", e.g. <code>&lt;e id="myid"&gt;</code></span>
+					<code>E#myid</code>
+				</p>
+				<p><span class="micro"><strong>class selector</strong> an E element whose class is "myclass", e.g. <code>&lt;e class="myclass"&gt;</code></span>
+					<code>E.myclass</code>
+				</p>
+				
+			</div>
+		</div>
+		
+		<div id="page3" class="page">
+			<div class="inner">
+				<h2>Combinators <abbr class="amp" title="and">&amp;</abbr> negation</h2>
+				<p><span class="micro"><strong>descendant combinator</strong> to style an F element, which is a descendant of an E element</span>
+					<code>E F</code>
+				</p>
+				<p><span class="micro"><strong>child combinator</strong> an F element which is the direct child of an E element</span>
+					<code>E > F</code>
+				</p>
+				<p><span class="micro"><strong>adjacent sibling combinator</strong> an F element that is immediately preceded by an E element</span>
+					<code>E + F</code>
+				</p>
+				<p><span class="micro"><strong>general sibling combinator</strong> an F element preceded at some point by an E element</span>
+					<code>E ~ F</code>
+				</p>
+				<p><span class="micro"><strong>negation pseudo-class</strong> an E element that does not match simple selector <code>s</code></span>
+					<code>E:not(s)</code>
+				</p>
+				
+			</div>	
+		</div>
+		
+		<div id="page4" class="page">
+			<div class="inner">
+				<h2>Attribute selectors</h2>
+				<p><span class="micro">element E with a "foo" attribute</span>
+					<code>E[foo]</code>
+				</p>
+				<p><span class="micro">E&#8217;s attribute <code>foo</code>, value exactly equal to <code>bar</code></span>
+					<code>E[foo="bar"]</code>
+				</p>
+				<p><span class="micro">E&#8217;s attribute <code>foo</code>, value is whitespace-separated values, one of which is exactly "bar"</span>
+					<code>E[foo~="bar"]</code>
+				</p>
+				<p><span class="micro">E&#8217;s attribute <code>foo</code>, value begins exactly "bar"</span>
+					<code>E[foo^="bar"]</code>
+				</p>
+				<p><span class="micro">E&#8217;s attribute <code>foo</code>, value ends exactly "bar"</span>
+					<code>E[foo$="bar"]</code>
+				</p>
+				<p><span class="micro">E&#8217;s attribute <code>foo</code>, value contains substring "bar"</span>
+					<code>E[foo*="bar"]</code>
+				</p>
+				<p><span class="micro">E&#8217;s attribute <code>foo</code> has a hyphen-separated list of values beginning (from the left) with "en"</span>
+					<code>E[foo|="en"]</code>
+				</p>
+			</div>
+		</div>
+		
+		<div id="page5" class="page">
+			<div class="inner">
+				<h2>Structural pseudo-classes</h2>
+				<p class="micro"><code>n</code> can be replaced with an expression in all following cases <code>n</code> can be (odd), (even) or expressions such as  (3n + 1)</span></p>
+				<p><span class="micro">an E element, the n-th child of its parent</p>
+					<code>E:nth-child(n)</code>
+				</p>
+				<p><span class="micro">an E element, the n-th child of its parent, counting from the last one</span>
+					<code>E:nth-last-child(n)</code>
+				</p>
+				<p><span class="micro">an E element, the n-th sibling of its type</span>
+					<code>E:nth-of-type(n)</code>
+				</p>
+				
+				<p><span class="micro">an E element, the n-th sibling of its type, counting from the last one</span>
+					<code>E:nth-last-of-type(n)</code>
+				</p>
+				<p><span class="micro">an E element that is the document root, i.e. html</span>
+					<code>E:root</code>
+				</p>
+			</div>	
+		</div>
+		<div id="page6" class="page">
+			<div class="inner">
+				<h2>Structural pseudo-classes</h2>
+
+				<p><span class="micro">an E element, first child of its parent</span>
+					<code>E:first-child</code>
+				</p>
+				<p><span class="micro">an E element, first sibling of its type</span>
+					<code>E:first-of-type</code>
+				</p>
+				<p><span class="micro">an E element, last child of its parent</span>
+					<code>E:last-child </code>
+				</p>
+				<p><span class="micro">an E element, last sibling of its type</span>
+					<code>E:last-of-type</code>
+				</p>
+				<p><span class="micro">an E element, only child of its parent</span>
+					<code>E:only-child</code>
+				</p>
+				<p><span class="micro">an E element, only sibling of its type</span>
+					<code>E:only-of-type</code>
+				</p>
+				<p><span class="micro">an E element that has no children (including text nodes)</span>
+					<code>E:empty</code>
+				</p>
+
+			</div>	
+		</div>
+		
+		<div id="page7" class="page">
+			<div class="inner">
+				<h2>Pseudo-classes</h2>
+				<p><span class="micro">matches a link E when E is a link and not visited, hovered over focused on or active</span>
+					<code>E:link</code>
+				</p>
+				<p><span class="micro">the href target of the link E has been visited</span>
+					<code>E:visited</code>
+				</p>
+				<p><span class="micro">the link E has been activated</span>
+					<code>E:active</code>
+				</p>
+				<p><span class="micro">any element E when hovered over with a mouse</span>
+					<code>E:hover</code>
+				</p>
+				<p><span class="micro">the link or form control E when tabbed to with a keyboard</span>
+					<code>E:focus</code>
+				</p>
+				<p><span class="micro">element E is the fragment in the referring URI</span>
+					<code>E:target</code>
+				</p>
+				<p><span class="micro">an element of type E in language "fr"</span>
+					<code>E:lang(fr)</code>
+				</p>
+				
+				
+			</div>	
+		</div>
+		
+		<div id="page8" class="page">
+			<div class="inner">
+				<h2>Forms <abbr class="amp" title="and">&amp;</abbr> <span style="white-space: nowrap">Pseudo-elements</span></h2>
+				<p><span class="micro">a user interface element E which is enabled</span>
+					<code>E:enabled</code>
+				</p>
+				<p><span class="micro">a user interface element E which is disabled </span>
+					<code>E:disabled</code>
+				</p>
+				<p><span class="micro">a user interface element E which is checked</span>
+					<code>E:checked</code>
+				</p>
+				<p><span class="micro">the first formatted line of an E element</span>
+					<code>E::first-line</code>
+				</p>
+				<p><span class="micro">the first formatted letter of an E element</span>
+					<code>E::first-letter</code>
+				</p>
+				<p><span class="micro">generated content before an E element</span>
+					<code>E::before</code>
+				</p>
+				<p><span class="micro">generated content after an E element</span>
+					<code>E::after</code>
+				</p>
+				
+				<p class="micro" style="text-align: right; border-top: 1px solid #E0E0E0; margin-top: 3em"><span class="micro">http://www.w3.org/TR/css3-selectors/</span></p>
+			</div>	
+		</div>
+		
+	</div>
+
+</body>
+</html>
